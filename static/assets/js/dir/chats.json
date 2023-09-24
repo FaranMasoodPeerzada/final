@@ -1,1 +1,112 @@
-[{"chats": [{"id": 1, "from_id": 1, "to_id": 2, "msg": "hello how are you", "has_dropDown": false, "has_images": [], "has_files": [], "datetime": "2023-09-08", "isReplied": null}, {"id": 2, "from_id": 2, "to_id": 1, "msg": "thanks, I am fine", "has_dropDown": false, "has_images": [], "has_files": [], "datetime": "08:53 PM", "isReplied": null}, {"id": 3, "from_id": 1, "to_id": 2, "msg": "whats up", "has_dropDown": false, "has_images": [], "has_files": [], "datetime": "2023-09-08", "isReplied": null}, {"id": 4, "from_id": 2, "to_id": 1, "msg": "Nothing", "has_dropDown": false, "has_images": [], "has_files": [], "datetime": "08:59 PM", "isReplied": null}], "channel_chat": []}]
+[
+    {
+      "chats": [
+        {
+          "id": 2,
+          "from_id": 1,
+          "to_id": 2,
+          "has_dropDown": true,
+          "msg": "Hi, How can I chat with my file.",      
+          "has_images": [],
+          "has_files": [],
+          "datetime": "Now",        
+          "isReplied": 1
+        },
+
+
+        {
+          
+          "id": 1,
+          "from_id": 2,
+          "to_id": 1,
+          "msg": "Hello, I hope You will be fine, I am here to Guide you about the Leggo My Data, A Platform too chat with any type of data. 😊",
+          "has_dropDown": true,
+          "has_images": [],
+          "has_files": [],
+          "datetime": "Now",      
+          "isReplied": 2
+        },
+        
+        {
+          
+          "id": 1,
+          "from_id": 2,
+          "to_id": 1,
+          "msg": "You can start a new conversation with any type of data file such as PDF, CSV and text document by clicking on + button on the top right corner.",
+          "has_dropDown": true,
+          "has_images": [],
+          "has_files": [],
+          "datetime": "Now",      
+          "isReplied": 3
+        }
+          
+        
+        
+       
+      ], 
+   
+      "channel_chat" :[
+        {
+          "id": 1,
+          "from_id": 2,
+          "msg": "Good morning Everyone",    
+          "has_dropDown": true,   
+          "has_images": [],
+          "has_files": [],
+          "datetime":   "10:07 am",
+          "isReplied": []
+        },
+        {
+          "id": 2,
+          "from_id": 1,
+          "has_dropDown": true,
+          "msg": "Good morning, How are you? What about our next meeting?",       
+          "has_images": [],
+          "has_files": [],
+          "datetime":   "10:12 am",
+          "isReplied": []
+        },
+        {
+          "id": 3,
+          "from_id": 7,
+          "msg": "Yeah everything is fine, Our next meeting tomorrow at 10.00 am AM",   
+          "has_dropDown": true,    
+          "has_images": [],
+          "has_files": [],
+          "datetime":   "10:13 am",
+          "isReplied": []
+        },
+        {
+          "id": 4,
+          "from_id": 7,
+          "has_dropDown": true,
+          "msg": "Wow that's great",       
+          "has_images": [],
+          "has_files": [],
+          "datetime":   "10:14 am",
+          "isReplied": []
+        },
+        {
+          "id": 5,
+          "from_id": 1,
+          "has_dropDown": true,
+          "msg": "@Jean Berwick, Please Assign AB-123 to me",       
+          "has_images": [],
+          "has_files": [],
+          "datetime":   "10:14 am",
+          "isReplied": []
+        },
+        {
+          "id": 6,
+          "from_id": 2,
+          "msg": "Okay, Sure",
+          "has_dropDown": true,       
+          "has_images": [],
+          "has_files": [],
+          "datetime":   "10:15 am",
+          "isReplied": []
+        }
+      ]
+    }
+  ]
+  

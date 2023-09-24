@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -10,23 +11,58 @@
         <meta name="keywords" content="Doot chat template, chat, web chat template, chat status, chat template, communication, discussion, group chat, message, messenger template, status"/>
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../static/assets/images/favicon.ico" id="tabIcon">
+        <link rel="shortcut icon" href="{%  static 'assets/images/favicon.ico' %}" id="tabIcon">
 
         <!-- glightbox css -->
-        <link rel="stylesheet" href="../static/assets/libs/glightbox/css/glightbox.min.css">
+        <link rel="stylesheet" href="{%  static 'assets/libs/glightbox/css/glightbox.min.css' %}">
 
         <!-- swiper css -->
-        <link rel="stylesheet" href="../static/assets/libs/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="{%  static 'assets/libs/swiper/swiper-bundle.min.css' %}">
 
         
         <!-- Bootstrap Css -->
-        <link href="../static/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{%  static 'assets/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="../static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{%  static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="../static/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{%  static 'assets/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
 
-
+        <style>
+            /* Style for the round image container */
+            .round-image {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: #4eac6d;
+                /* Background color for the round image */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+            }
+    
+            .chat-conversation .data-chat-avatar img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+    
+            .round-name {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #4eac6d;
+                /* Background color for the round image */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+            }
+        </style>
     </head>
 
     <body>
@@ -91,7 +127,7 @@
                         </li>
                         <li class="nav-item dropdown profile-user-dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="../static/assets/images/users/avatar-1.jpg" alt="" class="profile-user rounded-circle">
+                                <img src="{%  static 'assets/images/users/avatar-1.jpg' %}" alt="" class="profile-user rounded-circle">
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" id="pills-user-tab" data-bs-toggle="pill" href="#pills-user" role="tab">Profile <i class="bx bx-user-circle text-muted ms-1"></i></a>
@@ -116,7 +152,7 @@
                         <!-- Start profile content -->
                         <div>
                             <div class="user-profile-img">
-                                <img src="../static/assets/images/small/img-4.jpg" class="profile-img" style="height: 160px;" alt="">
+                                <img src="{%  static 'assets/images/small/img-4.jpg' %}" class="profile-img" style="height: 160px;" alt="">
                                 <div class="overlay-content">
                                     <div>
                                         <div class="user-chat-nav p-2 ps-3">
@@ -146,7 +182,7 @@
 
                             <div class="text-center p-3 p-lg-4 border-bottom pt-2 pt-lg-2 mt-n5 position-relative">
                                 <div class="mb-lg-3 mb-2">
-                                    <img src="../static/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-lg img-thumbnail" alt="">
+                                    <img src="{%  static 'assets/images/users/avatar-1.jpg' %}" class="rounded-circle avatar-lg img-thumbnail" alt="">
                                 </div>
 
                                 <h5 class="font-size-16 mb-1 text-truncate">Adam Zampa</h5>
@@ -202,17 +238,17 @@
                                     <div class="profile-media-img">
                                         <div class="media-img-list">
                                             <a href="#">
-                                                <img src="../static/assets/images/small/img-1.jpg" alt="media img" class="img-fluid">
+                                                <img src="{%  static 'assets/images/small/img-1.jpg' %}" alt="media img" class="img-fluid">
                                             </a>
                                         </div>
                                         <div class="media-img-list">
                                             <a href="#">
-                                                <img src="../static/assets/images/small/img-2.jpg" alt="media img" class="img-fluid">
+                                                <img src="{%  static 'assets/images/small/img-2.jpg' %}" alt="media img" class="img-fluid">
                                             </a>
                                         </div>
                                         <div class="media-img-list">
                                             <a href="#">
-                                                <img src="../static/assets/images/small/img-4.jpg" alt="media img" class="img-fluid">
+                                                <img src="{%  static 'assets/images/small/img-4.jpg' %}" alt="media img" class="img-fluid">
                                                 <div class="bg-overlay">+ 15</div>
                                             </a>
                                         </div>
@@ -386,7 +422,7 @@
                                         <h4 class="mb-4">Chats</h4>
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <div data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="bottom" title="Add Contact">
+                                        <div data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="bottom" title="Create New Chat">
 
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addContact-exampleModal">
@@ -1133,7 +1169,7 @@
                         <!-- Start Settings content -->
                         <div>
                             <div class="user-profile-img">
-                                <img src="../static/assets/images/small/img-4.jpg" class="profile-img profile-foreground-img" style="height: 160px;" alt="">
+                                <img src="{%  static 'assets/images/small/img-4.jpg' %}" class="profile-img profile-foreground-img" style="height: 160px;" alt="">
                                 <div class="overlay-content">
                                     <div>
                                         <div class="user-chat-nav p-3">
@@ -1160,7 +1196,7 @@
 
                             <div class="text-center p-3 p-lg-4 border-bottom pt-2 pt-lg-2 mt-n5 position-relative">
                                 <div class="mb-3 profile-user">
-                                    <img src="../static/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-lg img-thumbnail user-profile-image" alt="user-profile-image">
+                                    <img src="{%  static 'assets/images/users/avatar-1.jpg' %}" class="rounded-circle avatar-lg img-thumbnail user-profile-image" alt="user-profile-image">
                                     <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
                                         <input id="profile-img-file-input" type="file" class="profile-img-file-input" >
                                         <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
@@ -1514,7 +1550,7 @@
                                         <div class="flex-grow-1 overflow-hidden">
                                             <div class="d-flex align-items-center">                            
                                                 <div class="flex-shrink-0 chat-user-img online user-own-img align-self-center me-3 ms-0">
-                                                    <img src="../static/assets/images/users/avatar-2.jpg" class="rounded-circle avatar-sm" alt="">
+                                                    <img src="{%  static 'assets/images/users/avatar-2.jpg' %}" class="rounded-circle avatar-sm" alt="">
                                                     <span class="user-status"></span>
                                                 </div>
                                                 <div class="flex-grow-1 overflow-hidden">
@@ -1595,6 +1631,7 @@
 
                         <div class="chat-conversation p-3 p-lg-4 " id="chat-conversation" data-simplebar>
                             <ul class="list-unstyled chat-conversation-list" id="users-conversation">               
+                            
                             </ul>    
                         </div>
 
@@ -1618,7 +1655,7 @@
                                         <div class="flex-grow-1 overflow-hidden">
                                             <div class="d-flex align-items-center">                            
                                                 <div class="flex-shrink-0 chat-user-img online user-own-img align-self-center me-3">
-                                                    <img src="../static/assets/images/users/user-dummy-img.jpg" class="rounded-circle avatar-sm" alt="">                            
+                                                    <img src="{%  static 'assets/images/users/user-dummy-img.jpg' %}" class="rounded-circle avatar-sm" alt="">                            
                                                 </div>
                                                 <div class="flex-grow-1 overflow-hidden">
                                                     <h6 class="text-truncate mb-0 font-size-18"><a href="#" class="user-profile-show text-reset">Design Phase 2</a></h6>
@@ -1697,7 +1734,9 @@
                         <div class="position-relative">
                             <div class="chat-input-section p-3 p-lg-4"> 
                            
-                                <form id="chatinput-form" enctype="multipart/form-data" > 
+                                <form class="chatinput-form" enctype="multipart/form-data" method="POST" >
+                                    {% csrf_token %}
+                                   
                                     <div class="row g-0 align-items-center">  
                                      <div class="file_Upload"></div>                                  
                                         <div class="col-auto">
@@ -1719,7 +1758,8 @@
                                                 <div class="chat-input-feedback">
                                                     Please Enter a Message
                                                 </div>
-                                                <input autocomplete="off" type="text" class="form-control form-control-lg chat-input" autofocus id="chat-input" placeholder="Type your message...">
+                                                <input type="hidden" name="form_name" value="new_msg">
+                                                <input autocomplete="off" type="text" class="form-control form-control-lg chat-input" autofocus id="chat-input" name='chat-input' placeholder="Type your message..." >
                                             </div>
                                         </div>
                                         <div class="col-auto">
@@ -1859,7 +1899,7 @@
 
                         <div class="p-3 border-bottom">
                             <div class="user-profile-img">
-                                <img src="../static/assets/images/users/avatar-2.jpg" class="profile-img rounded" alt="">
+                                <img src="{%  static 'assets/images/users/avatar-2.jpg' %}" class="profile-img rounded" alt="">
                                 <div class="overlay-content rounded">
                                     <div class="user-chat-nav p-2">
                                         <div class="d-flex w-100">
@@ -2046,22 +2086,22 @@
                                 <div class="profile-media-img">
                                     <div class="media-img-list">
                                         <a href="#">
-                                            <img src="../static/assets/images/small/img-1.jpg" alt="media img" class="img-fluid">
+                                            <img src="{%  static 'assets/images/small/img-1.jpg' %}" alt="media img" class="img-fluid">
                                         </a>
                                     </div>
                                     <div class="media-img-list">
                                         <a href="#">
-                                            <img src="../static/assets/images/small/img-2.jpg" alt="media img" class="img-fluid">
+                                            <img src="{%  static 'assets/images/small/img-2.jpg' %}" alt="media img" class="img-fluid">
                                         </a>
                                     </div>
                                     <div class="media-img-list">
                                         <a href="#">
-                                            <img src="../static/assets/images/small/img-3.jpg" alt="media img" class="img-fluid">
+                                            <img src="{%  static 'assets/images/small/img-3.jpg' %}" alt="media img" class="img-fluid">
                                         </a>
                                     </div>
                                     <div class="media-img-list">
                                         <a href="#">
-                                            <img src="../static/assets/images/small/img-4.jpg" alt="media img" class="img-fluid">
+                                            <img src="{%  static 'assets/images/small/img-4.jpg' %}" alt="media img" class="img-fluid">
                                             <div class="bg-overlay">+ 15</div>
                                         </a>
                                     </div>
@@ -2231,30 +2271,48 @@
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content modal-header-colored shadow-lg border-0">
                         <div class="modal-header">
-                            <h5 class="modal-title text-white font-size-16" id="addContact-exampleModalLabel">Create Contact</h5>
+                            <h5 class="modal-title text-white font-size-16" id="addContact-exampleModalLabel">Create New Chat</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
                             </button>
                         </div>
                         <div class="modal-body p-4">
-                            <form>
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                       
+                                <!-- Other form fields ... -->
                                 <div class="mb-3">
-                                    <label for="addcontactemail-input" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="addcontactemail-input" placeholder="Enter Email">
+                                    {{ form.title.label_tag }}
+                                    {{ form.title }}
                                 </div>
                                 <div class="mb-3">
-                                    <label for="addcontactname-input" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="addcontactname-input" placeholder="Enter Name">
+                                    <div class="swiper-slide">
+                                        <div class="text-center px-2 position-relative">
+                                            <div>
+                                                {{ form.document }}
+                                                <label for="{{ form.document.id_for_label }}"
+                                                    class="avatar-sm mx-auto stretched-link">
+                                                    <span
+                                                        class="avatar-title font-size-18 bg-primary-subtle text-primary rounded-circle">
+                                                        <i class="bx bx-paperclip"></i>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <h5 class="font-size-11 text-uppercase mt-3 mb-0 text-body text-truncate">
+                                                Attach the document to Chat with
+                                            </h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="mb-0">
-                                    <label for="addcontact-invitemessage-input" class="form-label">Invatation Message</label>
-                                    <textarea class="form-control" id="addcontact-invitemessage-input" rows="3" placeholder="Enter Message"></textarea>
+    
+                                <div class="modal-footer">
+    
+                                    <button type="submit" class="btn btn-primary">Start Chat</button>
                                 </div>
+    
                             </form>
+    
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Invite</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -2267,7 +2325,7 @@
                         <div class="modal-body p-0">
                             <div class="text-center p-4 pb-0">
                                 <div class="avatar-xl mx-auto mb-4">
-                                    <img src="../static/assets/images/users/avatar-2.jpg" alt="" class="img-thumbnail rounded-circle">
+                                    <img src="{%  static 'assets/images/users/avatar-2.jpg' %}" alt="" class="img-thumbnail rounded-circle">
                                 </div>
 
                                 <div class="d-flex justify-content-center align-items-center mt-4">
@@ -2322,7 +2380,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content shadow-lg border-0">
                         <div class="modal-body p-0">
-                            <img src="../static/assets/images/users/avatar-2.jpg" alt="" class="videocallModal-bg">
+                            <img src="{%  static 'assets/images/users/avatar-2.jpg' %}" alt="" class="videocallModal-bg">
                             <div class="position-absolute start-0 end-0 bottom-0">
                                 <div class="text-center">
                                     <div class="d-flex justify-content-center align-items-center text-center">
@@ -2615,7 +2673,7 @@
                                     <h5 class="conversation-name">Jean Berwick</h5>
                                     <p class="mb-0">Yeah everything is fine. Our next meeting tomorrow at 10.00 AM</p>
                                 </div>
-                                <textarea class="form-control" placeholder="Type your message..." rows="2"></textarea>
+                                <textarea class="form-control" placeholder="Type your messages..." rows="2"></textarea>
                             </div>
                             <hr class="my-4">
                             <div class="input-group mb-3">
@@ -3192,24 +3250,148 @@
         <!-- end  layout wrapper -->
 
         <!-- JAVASCRIPT -->
-        <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="../static/assets/libs/node-waves/waves.min.js"></script>
+        <script src="{%  static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{%  static 'assets/libs/simplebar/simplebar.min.js' %}"></script>
+        <script src="{%  static 'assets/libs/node-waves/waves.min.js' %}"></script>
         
         <!-- glightbox js -->
-        <script src="../static/assets/libs/glightbox/js/glightbox.min.js"></script>
+        <script src="{%  static 'assets/libs/glightbox/js/glightbox.min.js' %}"></script>
 
         <!-- Swiper JS -->
-        <script src="../static/assets/libs/swiper/swiper-bundle.min.js"></script>
+        <script src="{%  static 'assets/libs/swiper/swiper-bundle.min.js' %}"></script>
 
         <!-- fg-emoji-picker JS -->
-        <script src="../static/assets/libs/fg-emoji-picker/fgEmojiPicker.js"></script>
+        <script src="{%  static 'assets/libs/fg-emoji-picker/fgEmojiPicker.js' %}"></script>
 
         <!-- page init -->
-        <script src="../static/assets/js/pages/index.init.js"></script>
-        {% comment %} <script src="../static/assets\chats.js"></script> {% endcomment %}
+        <script src="{%  static 'assets/js/pages/index.init.js' %}"></script>
+        <script src="{%  static 'assets/chats.js' %}"></script>
 
-        <script src="../static/assets/js/app.js"></script>
+        <script src="{%  static 'assets/js/app.js' %}"></script>
         
-    </body>
+        
+        {% comment %} <script>
+            const messageForm = document.querySelector('.chatinput-form');
+            const messageInput = document.querySelector('#chat-input');
+            const messagesList = document.querySelector('.chat-conversation-list');
+           
+                  messageForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                
+                    const message = messageInput.value.trim();
+                    if (message.length === 0) {
+                      return;
+                    }
+                    
+                  const timestamp = new Date().toLocaleTimeString('en-US', {
+                      timeZone: 'Asia/Karachi',
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric',
+                      hour: 'numeric',
+                      minute: 'numeric'
+                  });
+                
+                    const messageItem = document.createElement('li');
+                    messageItem.classList.add('chat-list', 'right');
+                    messageItem.innerHTML = ` <div class="conversation-list">
+                      <div class="user-chat-content">
+                       <div class="ctext-wrap"> 
+                        <div class="ctext-wrap-content">  
+                         <p class="mb-0 ctext-content">${message}</p>    
+                     </div>                            
+                     <div class="dropdown align-self-start message-box-drop"> 
+                      <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                      <i class="ri-more-2-fill"></i>          
+                      </a>                                
+                      <div class="dropdown-menu">                                    
+                      <a class="dropdown-item d-flex align-items-center justify-content-between reply-message" href="#" data-bs-toggle="collapse" data-bs-target=".replyCollapse">Reply 
+                         <i class="bx bx-share ms-2 text-muted"></i>
+                     </a>                                    
+                     <a class="dropdown-item d-flex align-items-center justify-content-between" href="#" data-bs-toggle="modal" data-bs-target=".forwardModal">Forward 
+                         <i class="bx bx-share-alt ms-2 text-muted"></i></a>           
+                         <a class="dropdown-item d-flex align-items-center justify-content-between copy-message" href="#" id="copy-message-2">Copy 
+                             <i class="bx bx-copy text-muted ms-2"></i></a>                                   
+                              <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Bookmark
+                                  <i class="bx bx-bookmarks text-muted ms-2"></i></a>    
+                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Mark as Unread 
+                                     <i class="bx bx-message-error text-muted ms-2"></i></a>                         
+                                     <a class="dropdown-item d-flex align-items-center justify-content-between delete-item" id="delete-item-2" href="#">Delete 
+                                         <i class="bx bx-trash text-muted ms-2"></i></a>                            
+                                     </div>                        
+                                 </div>                    
+                             </div>                    
+                             <div class="conversation-name">                        
+                                 <small class="text-muted time">${timestamp }</small>                        
+                                 <span class="text-warning check-message-icon"><i class="bx bx-check"></i>
+                                 </span>                    
+                             </div>                
+                         </div>            </div>       `;
+                    messagesList.appendChild(messageItem);
+
+
+
+
+                
+                    messageInput.value = '';
+                    const conversationId = 17;
+                    fetch('/get_chat_messages/${conversationId}/', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                      body: new URLSearchParams({
+                        'csrfmiddlewaretoken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                        'message': message
+                      })
+                    })
+                      .then(response => response.json())
+                      .then(data => {
+                        const response = data.response;
+                        const messageItem = document.createElement('li');
+                        messageItem.classList.add('chat-list', 'left');
+                        messageItem.innerHTML = ` <div class="conversation-list">
+                          <div class="user-chat-content">
+                           <div class="ctext-wrap"> 
+                            <div class="ctext-wrap-content">  
+                             <p class="mb-0 ctext-content">${response}</p>    
+                         </div>                            
+                         <div class="dropdown align-self-start message-box-drop"> 
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                          <i class="ri-more-2-fill"></i>          
+                          </a>                                
+                          <div class="dropdown-menu">                                    
+                          <a class="dropdown-item d-flex align-items-center justify-content-between reply-message" href="#" data-bs-toggle="collapse" data-bs-target=".replyCollapse">Reply 
+                             <i class="bx bx-share ms-2 text-muted"></i>
+                         </a>                                    
+                         <a class="dropdown-item d-flex align-items-center justify-content-between" href="#" data-bs-toggle="modal" data-bs-target=".forwardModal">Forward 
+                             <i class="bx bx-share-alt ms-2 text-muted"></i></a>           
+                             <a class="dropdown-item d-flex align-items-center justify-content-between copy-message" href="#" id="copy-message-2">Copy 
+                                 <i class="bx bx-copy text-muted ms-2"></i></a>                                   
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Bookmark
+                                      <i class="bx bx-bookmarks text-muted ms-2"></i></a>    
+                                       <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Mark as Unread 
+                                         <i class="bx bx-message-error text-muted ms-2"></i></a>                         
+                                         <a class="dropdown-item d-flex align-items-center justify-content-between delete-item" id="delete-item-2" href="#">Delete 
+                                             <i class="bx bx-trash text-muted ms-2"></i></a>                            
+                                         </div>                        
+                                     </div>                    
+                                 </div>                    
+                                 <div class="conversation-name">                        
+                                     <small class="text-muted time">${timestamp }</small>                        
+                                     <span class="text-success check-message-icon"><i class="bx bx-check"></i>
+                                     </span>                    
+                                 </div>                
+                             </div>            </div>      
+                          `;
+                          messagesList.appendChild(messageItem);
+                      });
+                  });
+                
+                
+                </script>
+          
+                
+        
+    {% endcomment %}
+    
+</body> 
 </html>

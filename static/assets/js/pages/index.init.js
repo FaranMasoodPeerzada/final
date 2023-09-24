@@ -304,26 +304,8 @@ function themeColor(e) {
               (m = "users"), r(), (u = "users-chat");
               var t = l.getAttribute("id"),
                 a = l.querySelector(".text-truncate").innerHTML;
-                var selected_chat_id = parseInt(t.match(/\d+/)[0]);
-                console.log(selected_chat_id);
-                var data = { t: selected_chat_id };
-              
-      // Send data to the server via AJAX
-    fetch('/server_endpoint/', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-})
-.then(response => response.json())
-.then(data => {
-  // Handle the response from the server if needed
-  console.log(data); // Log the response data
-})
-.catch(error => {
-  console.error('Fetch Error:', error);
-});
+                
+                
 
 
       // Other actions you want to perform on item click
@@ -380,9 +362,9 @@ function themeColor(e) {
                 .getElementById("users-conversation")
                 .querySelectorAll(".left .chat-avatar")
                 .forEach(function (e) {
-                  i
-                    ? e.querySelector("img").setAttribute("src", i)
-                    : e.querySelector("img").setAttribute("src", n);
+                  // i
+                  //   ? e.querySelector("img").setAttribute("src", i)
+                  //   : e.querySelector("img").setAttribute("src", n);
                 }),
                 window.stop();
             });
@@ -392,6 +374,7 @@ function themeColor(e) {
           (u = "channel-chat"), (m = "channel"), r();
           var t = i.getAttribute("id"),
             a = i.querySelector(".text-truncate").innerHTML;
+            console.log(t);
           (document
             .getElementById("channel-chat")
             .querySelector(".text-truncate .user-profile-show").innerHTML = a),
@@ -1215,21 +1198,28 @@ function themeColor(e) {
   function _(e) {
     var t, a, s;
     (t = e),
+    
       (a = function (e, t) {
         var l, n, a, i, r, s, o, c;
         null !== e
           ? console.log("Something went wrong: " + e)
           : ((l = "users" == m ? t[0].chats : t[0].channel_chat),
             (document.getElementById(m + "-conversation").innerHTML = ""),
+            
             (n = 0),
+            
             l.forEach(function (t, e) {
+              
               var a, s, i;
+             
               0 < n
                 ? --n
                 : ((a = t.from_id == v ? " right" : " left"),
                   (s = f.find(function (e) {
                     return e.id == t.from_id;
+                    
                   })),
+                 
                   (i =
                     '<li class="chat-list' +
                     a +
@@ -1260,6 +1250,7 @@ function themeColor(e) {
                         s++, t++;
                       return s;
                     })(l, e, t.from_id)),
+                    
                     (i += (function (e, t, a) {
                       for (
                         var s = 0;
@@ -1283,6 +1274,7 @@ function themeColor(e) {
                   (i += "</div>                </div>            </li>"),
                   (document.getElementById(m + "-conversation").innerHTML +=
                     i));
+                    console.log("l",e);
             })),
           y.querySelectorAll(".delete-item").forEach(function (e) {
             e.addEventListener("click", function () {

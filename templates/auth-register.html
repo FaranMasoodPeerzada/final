@@ -1,41 +1,48 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 
     <head>
-        
+                
         <meta charset="utf-8" />
-        <title>Register | Doot - Responsive Bootstrap 5 Chat App</title>
+        <title>Registration| LeggoData </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Doot - Responsive Chat App Template in HTML. A fully featured HTML chat messenger template in Bootstrap 5" name="description" />
-        <meta name="keywords" content="Doot chat template, chat, web chat template, chat status, chat template, communication, discussion, group chat, message, messenger template, status"/>
-        <meta content="Themesbrand" name="author" />
+        <meta
+        content="LeggoData  - A chat Platform where you can communicate with any type of datafile using the OpenAi chat functionality. "
+        name="description" />
+    <meta name="keywords"
+        content="LeggoData  - A chat Platform where you can communicate with any type of datafile using the OpenAi chat functionality. "/>
+   <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../static/assets/images/favicon.ico" id="tabIcon">
+        <link rel="shortcut icon" href="{% static 'assets/images/chat.png'%}" id="tabIcon">
 
         
         <!-- Bootstrap Css -->
-        <link href="../static/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets/css/bootstrap.min.css'%}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="../static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets/css/icons.min.css'%}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="../static/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets/css/app.min.css'%}" id="app-style" rel="stylesheet" type="text/css" />
 
-
+        <style>
+         
+              </style>
+        </style>
     </head>
 
-    <body>
-
+    <body >
         <div class="auth-bg">
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-xl-3 col-lg-4">
                         <div class="p-4 pb-0 p-lg-5 pb-lg-0 auth-logo-section">
                             <div class="text-white-50">
-                                <h3><a href="index.html" class="text-white"><i class="bx bxs-message-alt-detail align-middle text-white h3 mb-1 me-2"></i> Doot</a></h5>
-                                <p class="font-size-16">Responsive Bootstrap 5 Chat App</p>
+                                <h3><a href="/" class="text-white"><img src="{% static 'assets/images/LeggoData.png'%}" width="100%" height="50%"></a></h5>
+                                <p class="font-size-24">Chat with your data using LeggoData </p>
                             </div>
                             <div class="mt-auto">
-                                <img src="../static/assets/images/auth-img.png" alt="" class="auth-img">
+                                <img src="{% static 'assets/images/auth-img.png'%}" alt="" class="auth-img">
                             </div>
                         </div>
                     </div>
@@ -50,36 +57,70 @@
                                             
                                             <div class="text-center mb-5">
                                                 <h3>Register Account</h3>
-                                                <p class="text-muted">Get your free Doot account now.</p>
+                                                <p class="text-muted">Get your LeggoData  account now.</p>
+<!-- Message alerts -->
+  
+
                                             </div>
-                                            <form class="needs-validation" novalidate action="index.html">
+            <form class="needs-validation"  action="/signup" method="POST">
+            {% csrf_token%}
+            <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" id="username" placeholder="Enter first name" required="required">
+    <div class="invalid-feedback">
+                                                        Please Username
+                                            </div>  
+                                                </div> 
+                <div class="mb-3">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="fname" id="firstname" placeholder="Enter first name" required>
+                        <div class="invalid-feedback">
+                                                        Please Enter First Name
+                                                    </div>  
+                                            </div>
+                            <div class="mb-3">
+                            <label for="lastname" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" name="lname" id="lastname" placeholder="Enter last name" required>
+                                                    <div class="invalid-feedback">
+                                                        Please Enter Last name
+                                                    </div>  
+                                                </div>
                                                 <div class="mb-3">
                                                     <label for="useremail" class="form-label">Email</label>
-                                                    <input type="email" class="form-control" id="useremail" placeholder="Enter email" required>  
+                                                    <input type="email" name="email" class="form-control" id="useremail" placeholder="Enter email" required>  
                                                     <div class="invalid-feedback">
                                                         Please Enter Email
                                                     </div>      
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="username" class="form-label">Username</label>
-                                                    <input type="text" class="form-control" id="username" placeholder="Enter username" required>
-                                                    <div class="invalid-feedback">
-                                                        Please Enter Username
-                                                    </div>  
-                                                </div>
+                                                
                                                 
                                                 <div class="mb-3">
-                                                    <label for="userpassword" class="form-label">Password</label>
-                                                    <input type="password" class="form-control" id="userpassword" placeholder="Enter password" required>
+                                                    <label for="userpassword1" class="form-label">Choose A Password</label>
+                                                    <input type="password" name="password1" class="form-control" id="userpassword1" placeholder="Choose your password" required>
+                                                    <div class="invalid-feedback">
+                                                        Please Enter Password
+                                                    </div>       
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="userpassword2" class="form-label">Confirm Password</label>
+                                                    <input type="password" name="password2" class="form-control" id="userpassword2" placeholder="Enter your password again" required>
                                                     <div class="invalid-feedback">
                                                         Please Enter Password
                                                     </div>       
                                                 </div>
             
-                                                <div class="mb-4">
-                                                    <p class="mb-0">By registering you agree to the Doot <a href="#" class="text-primary">Terms of Use</a></p>
-                                                </div>
             
+                                                <div class="mb-4">
+                                                    <p class="mb-0">By registering you agree to the LeggoData  <a href="#" class="text-primary">Terms of Use</a></p>
+                                                </div>
+            <br>
+           
+            {% for message in messages  %}   
+            <div class="alert alert-{{ message.tags }}" role="alert">
+                <strong>Message : </strong> {{ message }}
+              </div>
+
+                                                       {% endfor %}    
                                                 <div class="mb-3">
                                                     <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Register</button>
                                                 </div>
@@ -103,7 +144,7 @@
                                             </form><!-- end form -->
             
                                             <div class="mt-5 text-center text-muted">
-                                                <p>Already have an account ? <a href="auth-login.html" class="fw-medium text-decoration-underline">Login</a></p>
+                                                <p>Already have an account ? <a href="/user-login-page" class="fw-medium text-decoration-underline">Login</a></p>
                                             </div>
                                         </div>
                                     </div><!-- end col -->
@@ -129,16 +170,16 @@
         <!-- end auth bg -->
 
         <!-- JAVASCRIPT -->
-        <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="../static/assets/libs/node-waves/waves.min.js"></script>
+        <script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+        <script src="{% static 'assets/libs/simplebar/simplebar.min.js'%}"></script>
+        <script src="{% static 'assets/libs/node-waves/waves.min.js'%}"></script>
         <!-- validation init -->
-        <script src="../static/assets/js/pages/validation.init.js"></script>
+        <script src="{% static 'assets/js/pages/validation.init.js'%}"></script>
 
         <!-- theme-style init -->
-        <script src="../static/assets/js/pages/theme-style.init.js"></script>
+        <script src="{% static 'assets/js/pages/theme-style.init.js'%}"></script>
 
-        <script src="../static/assets/js/app.js"></script>
+        <script src="{% static 'assets/js/app.js'%}"></script>
 
     </body>
 </html>

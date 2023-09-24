@@ -3,19 +3,19 @@
         "id": 1,
         "name": "Adam Zampa",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-1.jpg"
+        "profile": ""
     },
     {
         "id": 2,
         "name": "Bella Cote",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-2.jpg"
+        "profile": ""
     },
     {
         "id": 3,
         "name": "Floria Underhill",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-3.jpg"
+        "profile": ""
     },
     {   "id": 4,
         "name": "Fidel Pinard",
@@ -26,50 +26,50 @@
         "id": 5,
         "name": "Fenrick Beriwck",
         "status": "Offline",
-        "profile": "static/assets/images/users/avatar-6.jpg"
+        "profile": ""
     },
     {
         "id": 6,
         "name": "Iris Lewis",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-7.jpg"
+        "profile": ""
     },
     {
         "id": 7,
         "name": "John Foss",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-8.jpg"
+        "profile": ""
     },
     {
         "id": 8,
         "name": "Kathryn Swarey",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-9.jpg"
+        "profile": ""
     },
     {
         "id": 9,
         "name": "Nicholas Staten",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-10.jpg"
+        "profile": ""
     },
     {
         "id": 10,
         "name": "Patrick Hendricks",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-11.jpg",
+        "profile": "",
         "messagecount" : 18
     },       
     {
         "id": 11,
         "name": "Robert Ledonne",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-12.jpg"
+        "profile": ""
     },
     {
         "id": 12,
         "name": "Dobert Ledonne",
         "status": "online",
-        "profile": "static/assets/images/users/avatar-5.jpg"
+        "profile": ""
     }   
   ]
   

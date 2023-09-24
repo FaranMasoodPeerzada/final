@@ -53,8 +53,8 @@ class Conversation(models.Model):
 
 class Message(models.Model):
     conversation = models.ForeignKey(Conversation, on_delete=models.CASCADE)
-    text = models.TextField(default="hello")
-    response = models.TextField(default="helo")
+    question = models.TextField(default="hello")
+    answer = models.TextField(default="helo")
     is_user_message = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

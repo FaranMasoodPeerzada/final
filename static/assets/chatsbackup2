@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="user-chat-content">
                                     <div class="ctext-wrap"> 
                                         <div class="ctext-wrap-content">  
-                                            <p class="mb-0 ctext-content">Welcome to Leggo My Data!.</p>
+                                            <p class="mb-0 ctext-content">No messages available.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -78,12 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault();
             
                 const message = messageInput.value.trim();
-                
+                sendUserMessage(currentConversationId, message);
+                console.log(message);
                 if (message.length === 0) {
                   return;
                 }
-                sendUserMessage(currentConversationId, message);
-                // messageInput.disabled = true;
+                
               const timestamp = new Date().toLocaleTimeString('en-US', {
                   timeZone: 'Asia/Karachi',
                   year: 'numeric',
@@ -148,15 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
                 .then((data) => {
                     // Handle the response from OpenAI
-
-                    const timestamp = new Date().toLocaleTimeString('en-US', {
-                        timeZone: 'Asia/Karachi',
-                        year: 'numeric',
-                        month: 'numeric',
-                        day: 'numeric',
-                        hour: 'numeric',
-                        minute: 'numeric'
-                    });
                     const responseMessage = data.response; // Modify this based on the structure of the response
                     const messageItem = document.createElement('li');
                         messageItem.classList.add('chat-list', 'left');
@@ -188,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                      </div>                    
                                  </div>                    
                                  <div class="conversation-name">                        
-                                     <small class="text-muted time">${timestamp }</small>                        
+                                     <small class="text-muted time">timestamp</small>                        
                                      <span class="text-success check-message-icon"><i class="bx bx-check"></i>
                                      </span>                    
                                  </div>                
